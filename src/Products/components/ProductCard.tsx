@@ -1,7 +1,6 @@
 import {
 	Card,
 	CardContent,
-	CardDescription,
 	CardFooter,
 	CardHeader,
 	CardTitle,
@@ -18,15 +17,17 @@ const ProductCard = () => {
 					className="h-20"
 				/>
 			</CardHeader>
-			<CardContent className="flex flex-col w-full gap-2">
+			<CardContent className="flex flex-col w-full gap-4">
 				<CardTitle className="text-sm line-clamp-2">
 					{product.title}
 				</CardTitle>
-				<CardDescription>${product.price}</CardDescription>
+				<h4 className="text-lg font-semibold">${product.price}</h4>
 			</CardContent>
 			<CardFooter>
-				<p className="font-light text-sm text-green-400">
-					Free shipping
+				<p className="text-green-400">
+					{product.price < 50
+						? "Llega gratis mañana"
+						: "Envío gratis"}
 				</p>
 			</CardFooter>
 		</Card>
