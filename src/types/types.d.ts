@@ -40,6 +40,13 @@ interface Product {
 	returnPolicy: string
 	minimumOrderQuantity: number
 	meta: Meta
-	thumbnail: string
+	thumbnail: string | null
 	images: string[]
+}
+
+interface ProductsResponse {
+	products: Product[]
+	total: number
+	skip: number
+	limit: number
 }

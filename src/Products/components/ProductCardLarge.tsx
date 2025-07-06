@@ -1,13 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card"
-import product from "@/examples/product.json"
 
-const ProductCardLarge = () => {
+const ProductCardLarge = ({ product }: { product: Product }) => {
 	return (
 		<Card className="p-0 m-0 gap-0 h-[200px] w-[90%] md:w-[50%]">
 			<CardContent className="flex flex-row m-0 p-0 h-full gap-4 items-center">
 				<div>
 					<img
-						src={product.thumbnail}
+						src={product.thumbnail ?? product.images[0]}
 						alt={product.title}
 						className="h-40 w-full object-cover rounded-t-md"
 					/>
