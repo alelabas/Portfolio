@@ -22,11 +22,11 @@ export const HomeCarousel = () => {
 						delay: 3000,
 					}),
 				]}
-				className="w-full h-120 text-blue-500 font-bold rounded-2xl"
+				className="w-full h-120 text-blue-500 font-bold"
 			>
 				<CarouselContent>
 					{Object.values(images).map((src, index) => (
-						<CarouselItem key={index} className="">
+						<CarouselItem key={index}>
 							<img
 								src={src}
 								alt={`Carousel image ${index + 1}`}

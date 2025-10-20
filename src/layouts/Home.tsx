@@ -1,11 +1,11 @@
 import { Github, Instagram, Linkedin } from "lucide-react"
 import TypewriterComponent from "typewriter-effect"
-import { HomeCarousel } from "./HomeCarousel"
+import { HomeCarousel } from "../components/HomeCarousel"
 import { motion } from "framer-motion"
 
 /*Style everything as to occupie half of the screen in the case of the first and second div and center the last div*/
 
-export const Home = () => {
+const Home = () => {
 	return (
 		<section className="flex flex-col gap-40 mx-20">
 			<motion.div
@@ -16,7 +16,7 @@ export const Home = () => {
 				className="flex flex-row items-center justify-between gap-10 "
 			>
 				<div className="flex flex-col">
-					<h2 className="text-4xl">Welcome to...</h2>
+					<h2 className="text-4xl mb-6">Welcome to...</h2>
 					<h1 className="text-5xl">
 						<span className="text-blue-500 font-bold">
 							ALEJANDRO LABASTIE'S
@@ -27,7 +27,7 @@ export const Home = () => {
 						<TypewriterComponent
 							options={{
 								strings: [
-									"Full stack Developer",
+									"Full Stack Developer",
 									".NET Developer",
 									"React Developer",
 									"Tech Enthusiast",
@@ -88,7 +88,7 @@ export const Home = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: false }}
 				transition={{ duration: 0.6, ease: "easeInOut" }}
-				className="flex-1 flex flex-col gap-4 items-center justify-center"
+				className="flex-1 flex flex-col gap-4 items-center justify-center mb-20"
 			>
 				<h2 className="text-blue-500 font-bold text-5xl">
 					Find Me On...
@@ -114,3 +114,5 @@ export const Home = () => {
 		</section>
 	)
 }
+
+export default Home
