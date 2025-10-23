@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
-import { Analytics } from "@vercel/analytics/next";
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
         <Outlet />
       </main>
       <Footer />
-      <Analytics />
     </div>
   );
 };
