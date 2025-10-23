@@ -7,7 +7,7 @@
             "technologies": ["React", "TypeScript", "Tailwind CSS"],
             "github": "https://github.com/alelabas/Portfolio",
             "demo": "https://alelabas.github.io/Portfolio/",
-            "image": "./src/assets/projects/portfolio.png"
+            "image": "assets/projects/portfolio.png"
         },
         {
             "id": 2,
@@ -16,7 +16,7 @@
             "technologies": ["React", "CSS", "TypeScript"],
             "github": "https://github.com/alelabas/overspeed-rentals",
             "demo": "https://overspeedrentals.com/",
-            "image": "./src/assets/projects/overspeedrentals.png"
+            "image": "assets/projects/overspeedrentals.png"
         },
         {
             "id": 3,
@@ -25,7 +25,7 @@
             "technologies": ["React", "Tailwind CSS", "TypeScript", ".NET"],
             "github": "https://github.com/alelabas/Public-Moviegram",
             "demo": "",
-            "image": "./src/assets/projects/moviegram.png"
+            "image": "assets/projects/moviegram.png"
         },
         {
             "id": 4,
@@ -34,7 +34,7 @@
             "technologies": ["React", "Tailwind CSS", "TypeScript"],
             "github": "https://github.com/alelabas/work-tracker",
             "demo": "https://work-tracker-pied.vercel.app/",
-            "image": "./src/assets/projects/worktracker.png"
+            "image": "assets/projects/worktracker.png"
         },
         {
             "id": 5,
@@ -43,7 +43,7 @@
             "technologies": ["React", "CSS", "JavaScript", "PHP"],
             "github": "https://github.com/alelabas/Proyecto-Final",
             "demo": "",
-            "image": "./src/assets/projects/servinow.png"
+            "image": "assets/projects/servinow.png"
         }
 ]
 }
