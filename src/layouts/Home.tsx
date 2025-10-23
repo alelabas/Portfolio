@@ -3,6 +3,7 @@ import { HomeCarousel } from "../components/HomeCarousel";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import winkImage from "@/assets/stickers/winksticker.webp";
 
 const Home = () => {
   return (
@@ -81,7 +82,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            src="./src/assets/stickers/winksticker.webp"
+            src={winkImage}
             alt="winking sticker"
             className="md:ml-30 md:h-80"
           />
