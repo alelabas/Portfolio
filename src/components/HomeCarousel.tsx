@@ -1,15 +1,21 @@
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import firstPhoto from "@/assets/carousel/image1.jpg";
+import secondPhoto from "@/assets/carousel/image2.jpg";
+import thirdPhoto from "@/assets/carousel/image3.jpg";
+import fourthPhoto from "@/assets/carousel/image4.jpg";
+import fithPhoto from "@/assets/carousel/image5.jpg";
+import sixthPhoto from "@/assets/carousel/image6.jpg";
 
 export const HomeCarousel = () => {
-  const images = {
-    1: "@/assets/carousel/image1.jpg",
-    2: "@/assets/carousel/image2.jpg",
-    3: "@/assets/carousel/image3.jpg",
-    4: "@/assets/carousel/image4.jpg",
-    5: "@/assets/carousel/image5.jpg",
-    6: "@/assets/carousel/image6.jpg",
-  };
+  const images = [
+    firstPhoto,
+    secondPhoto,
+    thirdPhoto,
+    fourthPhoto,
+    fithPhoto,
+    sixthPhoto,
+  ];
 
   return (
     <div>
