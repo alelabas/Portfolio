@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import "./styles.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Outlet />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 };
