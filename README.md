@@ -1,69 +1,43 @@
-# React + TypeScript + Vite
+# Alejandro Labastie — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio rebuilt with **Next.js (App Router)** for SEO, styled with **Tailwind CSS v4**, animated with **Framer Motion**, and scrolled with **Lenis** for that buttery-smooth feel.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Next.js 15](https://nextjs.org/) — App Router, file-based metadata (sitemap, robots, Open Graph), `next/image`, `next/font`
+- [Tailwind CSS v4](https://tailwindcss.com/) — CSS-first config via `@theme` in `app/globals.css`
+- [Framer Motion](https://motion.dev/) — reveal animations, parallax, mobile menu
+- [Lenis](https://lenis.darkroom.engineering/) — smooth scrolling + anchor navigation
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+app/            # layout (SEO metadata, fonts, JSON-LD), page, globals.css, sitemap, robots
+components/     # Hero, About, Experience, Projects, Skills, Footer, Navbar, Marquee, Reveal, SmoothScroll
+data/content.ts # all site content: profile, experience, projects, skills
+public/         # images (projects/, carousel/), resume PDF
+```
+
+## Updating content
+
+Everything lives in [data/content.ts](data/content.ts) — projects, experience, skills and contact links.
+
+**Missing project images:** drop a screenshot into `public/projects/` (e.g. `renauticos.png`) and set the `image` field on the project entry. Projects without an image render a styled placeholder.
+
+**Resume:** replace `public/Alejandro-Labastie-Resume.pdf`.
+
+**Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for Open Graph, sitemap and robots) or edit the default in `data/content.ts`.
+
+## Deploying
+
+Built for [Vercel](https://vercel.com/) — push to `main` and import the repo. Vercel Analytics is already wired up.
+
+> Note: the old `gh-pages` deployment (Vite SPA) was retired with the rewrite — Next.js needs Vercel (or any Node host) to get the SSR/SEO benefits.
