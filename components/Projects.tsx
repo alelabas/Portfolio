@@ -12,13 +12,15 @@ function ProjectImage({ project }: { project: Project }) {
   if (!project.image) {
     if (project.logo) {
       return (
-        <Image
-          src={project.logo}
-          alt={`${project.title} logo`}
-          fill
-          sizes="(min-width: 768px) 34rem, 85vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        <div className="relative h-full w-full bg-[radial-gradient(120%_120%_at_50%_35%,#16181d_0%,#0c0d10_100%)]">
+          <Image
+            src={project.logo}
+            alt={`${project.title} logo`}
+            fill
+            sizes="(min-width: 768px) 34rem, 85vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105 md:object-contain md:p-8"
+          />
+        </div>
       );
     }
     return (
