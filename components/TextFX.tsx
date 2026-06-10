@@ -21,7 +21,7 @@ export function SplitLetters({
   return (
     <span className={`block overflow-hidden ${className}`}>
       <motion.span
-        className="block"
+        className="block whitespace-nowrap"
         initial="hidden"
         animate={show ? "show" : "hidden"}
         variants={{
